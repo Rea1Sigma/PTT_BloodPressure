@@ -3,8 +3,10 @@ This project is a comprehensive hardware and software development endeavor, prim
 
 On the hardware front, the STM32F103C8T6 is used as the main control chip, with a 3.7V lithium battery as the primary power supply. The ECG signal is acquired using the AD8232 cardiac amplifier front-end, adopting a three-lead method (attached to the left hand, right hand, and right leg), with the signal being sampled through the ADC of the STM32. For the PPG signal, a MAX30102 digital sensor is employed, which uses a time-division dual-wavelength method for acquisition and transmits the signal to the main control chip via a high-speed I2C bus. Upon receiving the PPG and ECG signals, the main controller performs synchronous sampling and transmits the signals to the host computer via the HC-05 Bluetooth module.
 
-The host computer interface is designed using Matlab’s App Designer. Once it receives signals from the hardware front-end, it displays the ECG and PPG signals in real-time. After applying digital filtering to these signals, algorithms are used to calculate the heart rate, blood oxygen level, systolic, and diastolic pressures, and then display the aforementioned physiological information.
+The “BloodPressure_PCB-ProgramDownload.zip” archive contains the programming files for the main control chip. Due to the large number of files, they have been uploaded in a compressed package. The “BloodPressure_UpperCP-matlabAppdesigner” folder contains the host computer program, which is developed in the Matlab 2021a AppDesigner & Windows 10 environment.
 
+The compressed file “BloodPressure_PCB-ProgramDownload.zip” contains the programming files for the main control chip. Due to the large number of files, they have been uploaded in a compressed package. The folder “BloodPressure_UpperCP-matlabAppdesigner” contains the host computer program, which is developed in the Matlab 2021a AppDesigner & Windows 10 environment.
+--
 The detailed information for the hardware PCB has been open-sourced on the JLCPCB platform. The open-source link is as follows:
 https://oshwhub.com/dingzhen_zhenzhu/ji-yu-stm32f103c8t6-yi-ji-ecg-yu-ppg-lian-he-ce-liang-xue-ya-she-ji-_20240916
 
@@ -18,6 +20,8 @@ https://www.bilibili.com/video/BV1GKxHezEDL/?spm_id_from=333.999.0.0
 
 上位机是基于Matlab的App Designer设计的。在接收到来自硬件前端的信号后，上位机能够实时显示ECG和PPG信号。在对这两种信号进行数字滤波后，利用算法计算心率、血氧、高压和低压值，最终显示上述生理信息。
 
+其中“BloodPressure_PCB-ProgramDownload.zip”压缩文件内为主控芯片的烧录程序，由于文件过多因此通过压缩包上传；“BloodPressure_UpperCP-matlabAppdesigner”文件夹内的是上位机程序，上位机的编译环境是matlab2021a AppDesigner & Windows 10
+--
 硬件PCB的具体信息已在嘉立创平台开源，开源链接如下：
 
 https://oshwhub.com/dingzhen_zhenzhu/ji-yu-stm32f103c8t6-yi-ji-ecg-yu-ppg-lian-he-ce-liang-xue-ya-she-ji-_20240916
